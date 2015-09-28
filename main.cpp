@@ -13,7 +13,7 @@ using namespace std;
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    Maze temp("/Users/Erik/Documents/School/AI/MP1/input.txt");
+    Maze temp("/Users/Erik/Documents/School/AI/MP1/MP1/input.txt");
 
     cout << temp.PrintMaze() << endl;
     cout << temp.getXsize() << "x dimmension" << endl;
@@ -23,5 +23,4 @@ int main(int argc, const char * argv[]) {
     
     return 0;
     
-    asdfas
 }
