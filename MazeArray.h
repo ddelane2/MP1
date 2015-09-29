@@ -46,20 +46,29 @@ public:
         xyCord getxyCord();
         
         //expands the current node
+        // expands all new nodes reachable from current node exept the parent of that node
+        void expandNode();
+        
+        //funtions that return all pointers
+        Node * getParent();
+        Node * getNorhChild();
+        Node * getEastChild();
+        Node * getSouthChild();
+        Node * getWestChild();
         
     private:
         //pointer to associated maze
         Maze * maze;
         
         // x and y coords of the node
-        xyCord locaction;
+        xyCord location;
         
         //all pinters to nodes
-        Node * parent;
-        Node * NorhChild;
-        Node * EastChild;
-        Node * SouthChild;
-        Node * WestChild;
+        Node * parent = NULL;
+        Node * NorhChild = NULL;
+        Node * EastChild = NULL;
+        Node * SouthChild = NULL;
+        Node * WestChild = NULL;
         
         
         
@@ -82,7 +91,7 @@ public:
     
     
     //returns starting node
-    Node getStartNode();
+    Node * getStartNode();
     
 private:
     vector <string> cMap;
